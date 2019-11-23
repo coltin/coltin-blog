@@ -93,7 +93,7 @@ You can ignore almost everything in the `solve()` method, it takes the two strin
 
 All of the logic comes from `moveAndFind()`. This takes the two pointers for where you are on each of the strings. If our indices extend past either string, we return 0 as an answer, which is our termination. Before we try to calculate the answer, we check memoize for whether the answer has already been calculated. If not, we have our two cases.
 
-In the first case if the characters match, we calculate our answer `1 + moveAndFind(s1i + 1, s2i + 1)` and assign it to `memoize[s2i][s2i]`, and then return it.
+In the first case if the characters match, we calculate our answer `1 + moveAndFind(s1i + 1, s2i + 1)` and assign it to `memoize[s1i][s2i]`, and then return it.
 
 When the characters don't match our formula is `Math.max(moveAndFind(s1i + 1, s2i), moveAndFind(s1i, s2i + 1))` which results in the branching calls.
 
