@@ -1,4 +1,69 @@
-baseURL = "https://wi.zard.work/"
-languageCode = "en-us"
-theme="hugo-coder"
 title = "Coltin's Blog"
+baseURL = "https://wi.zard.work/"
+theme="hugo-coder"
+
+languageCode = "en-us"
+defaultcontentlanguage = "en-us"
+
+paginate = 20
+pygmentsstyle = "b2"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+pygmentsUseClasses = true
+
+[params] # theme parameters
+    author = "Coltin Caverhill"
+    info = "Software Engineer, Hero"
+    description = "Coltins personal website"
+    keywords = "blog,developer,personal"
+    avatarurl = "image/avatar.jpg"
+
+    footercontent = "Tomorrows limitations are defined today"
+    fixedbarContent = ""
+    fixedbarContentAfter = ""
+
+    hideCredits = true
+    hideCopyright = true
+
+    custom_css = []
+
+    # Alignment of Mobile Menu items
+    itemscentered = true
+
+    # RTL support
+    rtl = false
+
+    # Bottom sns share
+    snsShare = false
+    enableTwitterShare = true
+    enableFacebookShare = true
+    enableHatenaShare = false
+    enableLineShare = false
+    enableLinkedInShare = true
+
+    # thumbnail = "images/tn.png" # default sns thumbnail
+
+    # Multilanguage mode
+    langseparator = "|"
+
+# Social links
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github"
+    weight = 1
+    url = "https://github.com/coltin/"
+[[params.social]]
+    name = "Twitter"
+    icon = "fab fa-twitter"
+    weight = 2
+    url = "https://twitter.com/coltinc/"
+
+# Menu links
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "posts"
+#[[menu.main]]
+#    name = "About"
+#    weight = 2
+#    url = "about"
