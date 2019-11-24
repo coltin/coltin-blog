@@ -30,7 +30,7 @@ My first approach to this problem was to traverse both strings from start to end
 
 1. The character at each location matches. If this is the case the answer will be <code>1 + solution(A<sub>i+1</sub>, B<sub>i+1</sub>)</code>. This means we chop off the string at the current location.
 
-2. The characters do not match, in which case we have two choices. Either the longest common child is at (A<sub>i+1</sub>, B<sub>i</sub>) or at (A<sub>i</sub>, B<sub>i+1</sub>). We don't care about (A<sub>i+1</sub>, B<sub>i+1</sub>) because that will be covered by this recusrive process (possibly by either or both branches we just made). So our answer when the characters don't match is <code>Math.max(solution(A<sub>i+1</sub>, B<sub>1</sub>), solution(A<sub>i</sub>, B<sub>i+1</sub>))</code>.
+2. The characters do not match, in which case we have two choices. Either the longest common child is at (A<sub>i+1</sub>, B<sub>i</sub>) or at (A<sub>i</sub>, B<sub>i+1</sub>). We don't care about (A<sub>i+1</sub>, B<sub>i+1</sub>) because that will be covered by this recursive process (possibly by either or both branches we just made). So our answer when the characters don't match is <code>Math.max(solution(A<sub>i+1</sub>, B<sub>1</sub>), solution(A<sub>i</sub>, B<sub>i+1</sub>))</code>.
 
 This is essentially the brute force framed as a recursive algorithm. For strings that are the same, like A="aaa" and B="aaa" the function will only be called 3 times, it's just a straight line to the answer. But when characters don't match, we need to look down each possible branch. Discard a letter in A and keep B, or keep A and discard a letter in B.
 
@@ -91,7 +91,7 @@ Note: You would test this with something like `assertEquals(3, new CommonChild()
 
 You can ignore almost everything in the `solve()` method, it takes the two strings, initializes/resets the memoize array which stores subproblems, and then makes a call to `moveAndFind(0, 0)`, which will eventually return the answer. Converting to `char[]` is in no way necessary, but I like to like at the array for readability, instead of calling `s1.charAt(sl1)` for example.
 
-All of the logic comes from `moveAndFind()`. This takes the two pointers for where you are on each of the strings. If our indicies extend past either string, we return 0 as an answer, which is our termination. Before we try to calculate the answer, we check memoize for whether the answer has already been calculated. If not, we have our two cases.
+All of the logic comes from `moveAndFind()`. This takes the two pointers for where you are on each of the strings. If our indices extend past either string, we return 0 as an answer, which is our termination. Before we try to calculate the answer, we check memoize for whether the answer has already been calculated. If not, we have our two cases.
 
 In the first case if the characters match, we calculate our answer `1 + moveAndFind(s1i + 1, s2i + 1)` and assign it to `memoize[s2i][s2i]`, and then return it.
 
@@ -105,11 +105,11 @@ Le poop. But we can do better.
 
 ## Sweet Iterative Salvation
 
-So our solution is fast, but the stackoverflow is an issue and just wasteful. Memoizing is a good use of space, but the call stacks are not, they are just lazy and we can do better. What we need is a non-recursive way to traverse the strings. We could unwrap the recursive function by using a stack to mimic the machine code (basically implementing recursion) but it's still wasting space, and just skirting around the JVM weakness (Stackoverflow). It might be a fun exercise to implement this, but for now we can do better.
+So our solution is fast, but the stack overflow is an issue and just wasteful. Memoizing is a good use of space, but the call stacks are not, they are just lazy and we can do better. What we need is a non-recursive way to traverse the strings. We could unwrap the recursive function by using a stack to mimic the machine code (basically implementing recursion) but it's still wasting space, and just skirting around the JVM weakness (stack overflow). It might be a fun exercise to implement this, but for now we can do better.
 
 The problem with the recursive solution is that to calculate `sol(0, 0)` we need to know either `sol(1, 1)` or `sol(0, 1) and sol(1, 0)`, and then each of those needs to know even more pieces. Once you get to the end of the line, you start collapsing the solutions and resolving the plus ones and the `Math.max()`s. So theres our secret; start with that and work backwards.
 
-As an interesting sidenote, the direction doesn't actually matter. You could do this whole thing from the beginning and move forward, but I find it easier to think in this direction.
+As an interesting side note, the direction doesn't actually matter. You could do this whole thing from the beginning and move forward, but I find it easier to think in this direction.
 
 Perhaps too much in the weeds, but we are also going to clean up our solution by expanding the memoize by 1 in both directions and initializing the ends to 0. This saves us from having to check during the main logic, making it easier to read and debug. Here is what it looked like in our previous solution
 
