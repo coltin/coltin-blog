@@ -1,9 +1,9 @@
-+++ 
++++
 draft = false
 date = 2019-11-20T20:15:22-05:00
 title = "Common Child Analysis"
 description = "A breakdown of Hacker Ranks Common Child problem"
-slug = "" 
+slug = ""
 tags = []
 categories = []
 externalLink = ""
@@ -14,15 +14,15 @@ Today we're going to look a problem on Hacker Rank called ["Common Child"](https
 
 ## The Problem
 
-We are given two strings of equal length and asked to find the length of the longest common child. The common child is defined as deleting 0 or more characters from a string. Deleting characters in this way makes them a subsequence. So given the string "1234" all the possible common children (subsequences) are `{"", "1", "2", "3", "4", "12", "13", "14", "23", "24", "34", "123", "124", "134", "234", "1234"}`, of which there are 16. In general there will be `2^{length(string)}` of them.
+We are given two strings of equal length and asked to find the length of the longest common child. The common child is defined as deleting 0 or more characters from a string. Deleting characters in this way makes them a subsequence. So given the string "1234" all the possible common children (subsequences) are `{"", "1", "2", "3", "4", "12", "13", "14", "23", "24", "34", "123", "124", "134", "234", "1234"}`, of which there are 16. In general there will be <code>2<sup>{length(string)}</sup></code> of them.
 
-As an aside, why 2^n where n is the length of the string? One interesting way to think about it is when you're generating the subsequences you make a yes or a no decision for each character and you do this n times. So if you look at the list above, you will see half of them will have a 1, and half of them will not. Go ahead and count, I'll wait. So you can reduce any subsequence count by taking out a character but multiplying the answer by 2. Let's try it! `subseq("1234")` = `2 * subseq("234")` = `2*2*subseq("34")` = `2*2*2*subseq("4")` = `2*2*2*2` = `2^4` = `16`.
+As an aside, why 2<sup>n</sup> where n is the length of the string? One interesting way to think about it is when you're generating the subsequences you make a yes or a no decision for each character and you do this n times. So if you look at the list above, you will see half of them will have a 1, and half of them will not. Go ahead and count, I'll wait. So you can reduce any subsequence count by taking out a character but multiplying the answer by 2. Let's try it! `subseq("1234")` = `2 * subseq("234")` = `2*2*subseq("34")` = `2*2*2*subseq("4")` = `2*2*2*2` = <code>2<sup>4</sup></code> = `16`.
 
-If the deconstruction is hard to think about, do it in reverse. You have `subseq("1")` is just the empty set, and the set with "1" in it. To get `subseq("12")` you take those two sets and duplicate them, adding a 2 to half of them. So `{"", "", "1", "1"}` without the 2 and then `{"". "2", "1", "12"}` with the 2 on half of them. You get the same process for adding a `"3"`, and you'll end up doubling each time.
+If the deconstruction is hard to think about, do it in reverse. You have `subseq("1")` is just the empty set, and the set with "1" in it. To get `subseq("12")` you take those two sets and duplicate them, adding a 2 to half of them. So `{"", "", "1", "1"}` without the 2 and then `{"", "2", "1", "12"}` with the 2 on half of them. You get the same process for adding a `"3"`, and you'll end up doubling each time.
 
 ## Brute Force!
 
-To solve this problem let's look at the brute force first. Given strings A="qqz1234zz" and B="a1b2cnam4" the longest common child is "124". The brute force way of doing this is to look at every common subsequence of A, and check if it matches every subsequence of B. This is a lot of comparisons though. For each 2^9 subsequences in A, you need to look at 2^9 subsequences in B to see if they match. You can reduce this a bunch if you only look at subsequences of the appropriate lengths, but still, for any sufficiently large string this is pretty hairy. Ours is roughly 250k comparisons, but for strings of length 15 we're already up to a billion.
+To solve this problem let's look at the brute force first. Given strings A="qqz1234zz" and B="a1b2cnam4" the longest common child is "124". The brute force way of doing this is to look at every common subsequence of A, and check if it matches every subsequence of B. This is a lot of comparisons though. For each 2<sup>9</sup> subsequences in A, you need to look at 2<sup>9</sup> subsequences in B to see if they match. You can reduce this a bunch if you only look at subsequences of the appropriate lengths, but still, for any sufficiently large string this is pretty hairy. Ours is roughly 250k comparisons, but for strings of length 15 we're already up to a billion.
 
 ## Less brutish.
 
