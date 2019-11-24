@@ -26,11 +26,11 @@ To solve this problem let's look at the brute force first. Given strings A="qqz1
 
 ## Less brutish.
 
-My first approach to this problem was to traverse both strings from start to end and decide how to increment the pointers based on the current character. We will call our index pointers Ai and Bi. As we travel through the string we have two cases:
+My first approach to this problem was to traverse both strings from start to end and decide how to increment the pointers based on the current character. We will call our index pointers A<sub>i</sub> and B<sub>i</sub>. As we travel through the string we have two cases:
 
-1. The character at each location matches. If this is the case the answer will be `1 + solution(Ai+1, Bi+1)`. This means we chop off the string at the current location.
+1. The character at each location matches. If this is the case the answer will be <code>1 + solution(A<sub>i+1</sub>, B<sub>i+1</sub>)</code>. This means we chop off the string at the current location.
 
-2. The characters do not match, in which case we have two choices. Either the longest common child is at (Ai+1, Bi) or at (Ai, Bi+1). We don't care about (Ai+1, Bi+1) because that will be covered by this recusrive process (possibly by either or both branches we just made). So our answer when the characters don't match is `Math.max(solution(Ai+1, B1), solution(Ai, Bi+1))`.
+2. The characters do not match, in which case we have two choices. Either the longest common child is at (A<sub>i+1</sub>, B<sub>i</sub>) or at (A<sub>i</sub>, B<sub>i+1</sub>). We don't care about (A<sub>i+1</sub>, B<sub>i+1</sub>) because that will be covered by this recusrive process (possibly by either or both branches we just made). So our answer when the characters don't match is <code>Math.max(solution(A<sub>i+1</sub>, B<sub>1</sub>), solution(A<sub>i</sub>, B<sub>i+1</sub>))</code>.
 
 This is essentially the brute force framed as a recursive algorithm. For strings that are the same, like A="aaa" and B="aaa" the function will only be called 3 times, it's just a straight line to the answer. But when characters don't match, we need to look down each possible branch. Discard a letter in A and keep B, or keep A and discard a letter in B.
 
