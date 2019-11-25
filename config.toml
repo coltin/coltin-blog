@@ -6,10 +6,10 @@ languageCode = "en-us"
 defaultcontentlanguage = "en-us"
 
 paginate = 20
-pygmentsstyle = "b2"
+# pygmentsstyle = "b2"
 pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
-pygmentsUseClasses = true
+pygmentscodefencesguesssyntax = false
+pygmentsUseClasses = false
 
 [params] # theme parameters
     author = "Coltin Caverhill"
