@@ -1,9 +1,9 @@
-+++ 
++++
 draft = false
 date = 2019-11-23T15:11:17-05:00
 title = "What's remote like after 4.5 years?"
 description = "Let's talk about remote"
-slug = "" 
+slug = ""
 tags = []
 categories = []
 externalLink = ""
@@ -12,7 +12,7 @@ series = []
 
 ## Forward
 
-This blog post is not a HOWTO or an FAQ, I just wanted to brain dump about my expereince over the past few years, so if that type of ramble appeals to you, enjoy! If you have specific questions on working remote, hit me up [on twitter](https://twitter.com/coltinc).
+This blog post is not a HOWTO or an FAQ, I just wanted to brain dump about my experience over the past few years, so if that type of ramble appeals to you, enjoy! If you have specific questions on working remote, hit me up [on twitter](https://twitter.com/coltinc).
 
 In June 2014 I started working as a Software Engineer at Yelp in San Francisco. A year later I wanted to move back to Canada to be closer to family and I have been working as a remote software engineer ever since. I've talked about this journey a lot with people, and I get a ton of questions about it, so I figure it's time sit down and write about it.
 
@@ -38,9 +38,9 @@ I don't think this was a detriment to the team, as the people who wanted my help
 
 Deep work also became a lot easier, and I felt like I could reach my potential much more easily. I could spend 2-3 days on something without any real distraction except a few 5-10 minute standups. Working remote helped me become a much stronger engineer because I could work on much more challenging things.
 
-Being remote also alleviated all of my work life balance guilt. At Yelp, even though nobody ever commented or made this the case, I alwyas felt bad when I wasn't at my desk. If I went for a walk, played a game of pool, or was in the bathroom too long, I'd feel anxious. What if people think I'm not working hard? What if this affects my bonus? etc. It was all in my head, but working remote was very much about output. It had to be. Nobody knew when I was working or not, so all that mattered was my output. I set aggressive goals in planning meetings to motivate myself to work hard, and I could take all the long walks or longer poops and it didn't matter. I could take a break and watch Day[9] videos in the middle of work day; who cares? I do good work, and that's all that matters. I could work early in the morning, go run errands, and then work in the evening. I could be incredibly flexible with my hours, without causing any harm to others, and improving my productivity. Instead of taking a half day of PTO to go to the doctors, I could just work around it. Work life balance became way more efficient and effective.
+Being remote also alleviated all of my work life balance guilt. At Yelp, even though nobody ever commented or made this the case, I always felt bad when I wasn't at my desk. If I went for a walk, played a game of pool, or was in the bathroom too long, I'd feel anxious. What if people think I'm not working hard? What if this affects my bonus? etc. It was all in my head, but working remote was very much about output. It had to be. Nobody knew when I was working or not, so all that mattered was my output. I set aggressive goals in planning meetings to motivate myself to work hard, and I could take all the long walks or longer poops and it didn't matter. I could take a break and watch Day[9] videos in the middle of work day; who cares? I do good work, and that's all that matters. I could work early in the morning, go run errands, and then work in the evening. I could be incredibly flexible with my hours, without causing any harm to others, and improving my productivity. Instead of taking a half day of PTO to go to the doctors, I could just work around it. Work life balance became way more efficient and effective.
 
-Lastly, the best part of being remote was/is being able to take a shower in the middle of a workday. Usually if I am working hard on something and I get it into a good state, or I need something to run, I'll go have a shower. It's a great time to medidate on a problem and feel completely refreshed. 20 minutes and I'm back at my desk, pounding at my keyboard like a new person. No office can compete with this, and if you work remote I highly recommend it.
+Lastly, the best part of being remote was/is being able to take a shower in the middle of a workday. Usually if I am working hard on something and I get it into a good state, or I need something to run, I'll go have a shower. It's a great time to meditate on a problem and feel completely refreshed. 20 minutes and I'm back at my desk, pounding at my keyboard like a new person. No office can compete with this, and if you work remote I highly recommend it.
 
 ## That's great, should I go remote? What are the downsides?
 
@@ -54,10 +54,10 @@ It felt like I was doing a good thing, but I was just burning myself out. My mot
 
 ## Is having remote workers worth it for businesses?
 
-I made major contributions to Yelp in my tenure there as a remote person, and had Yelp just said no (as so many companies still do), they would have lost out on all of that. They were hiring as many people as they could, so it was a clear win to support my remote request even if it had some perceived loss of inefficiency. There are plenty of people who are insanely skilled, but will not move to your companies cities. Even if they live in the city, they may not want to commute. Being open to remote gives a huge advantage to hiring and quality of life for your workers. 
+I made major contributions to Yelp in my tenure there as a remote person, and had Yelp just said no (as so many companies still do), they would have lost out on all of that. They were hiring as many people as they could, so it was a clear win to support my remote request even if it had some perceived loss of inefficiency. There are plenty of people who are insanely skilled, but will not move to your companies cities. Even if they live in the city, they may not want to commute. Being open to remote gives a huge advantage to hiring and quality of life for your workers.
 
 ## Would you do non-remote again?
 
-I am heavily recruited by many companies and I ask every single one of them whether they support remote. No? You want me to move to Seattle? Palo Alto? New York? Vancouver? Toronto? just so I can have the privledge of working for you? No thank you, I am much happier and productive as a remote worker, and I don't have to uproot my whole family and move. This does narrow my options for changing companies, but there are enough remote positions out there and the benifits high enough that it's worth it to me.
+I am heavily recruited by many companies and I ask every single one of them whether they support remote. No? You want me to move to Seattle? Palo Alto? New York? Vancouver? Toronto? just so I can have the privilege of working for you? No thank you, I am much happier and productive as a remote worker, and I don't have to uproot my whole family and move. This does narrow my options for changing companies, but there are enough remote positions out there and the benefits high enough that it's worth it to me.
 
-I won't automatically say no to a non-remote oppurtunity, but it would have to be pretty damn compelling. CHA-CHING.
+I won't automatically say no to a non-remote opportunity, but it would have to be pretty damn compelling. CHA-CHING.
