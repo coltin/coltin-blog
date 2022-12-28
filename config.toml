@@ -11,6 +11,11 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = false
 pygmentsUseClasses = false
 
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+    series = "series"
+
 [params] # theme parameters
     author = "Coltin Caverhill"
     info = "Software Engineer, Hero"
